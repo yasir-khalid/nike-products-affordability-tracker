@@ -10,11 +10,13 @@ It can automatically detect your code execution DAGs, can run on schedule, acros
 This shows the overall concept of the project; where all of the functions (called *Prefect tasks*) are managed by Prefect 2.0
 ![Concept](https://i.imgur.com/UISh7gO.png)
 
-All of the observability and monitoring is automatically added to the code execution when you specifiy the @task and @flow decorators in your code 
+All of the **observability** and **monitoring** is automatically added to the code execution when you specifiy the **@task** and **@flow** *decorators* in your code 
 
 ![Prefect cloud dashboard](https://i.imgur.com/glZpzwv.png)
 
+**Code execution** (*Flows*) can also be deployed to Prefect cloud where they can be parameterized as well as run on specific schedules either defined from UI or cron jobs
 
+![Prefect deployment schedule](https://i.imgur.com/uMH1gOi.png)
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your execution environment
