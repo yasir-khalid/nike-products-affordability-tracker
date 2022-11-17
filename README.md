@@ -5,6 +5,18 @@
 
 It can automatically detect your code execution DAGs, can run on schedule, across different infrasturcture and can be either self-hosted or cloud based monitoring.
 
+## Installation
+
+To run the code successfully, all the dependencies can either be installed using **pip**:
+
+```bash
+pip install -r requirements.txt
+```
+**or** run the code within a pre-defined conda environment that contains all the dependencies installed. To create that conda environment; use the following command:
+ 
+```bash
+conda env create -f environment.yml
+``` 
 ## Screenshots
 
 This shows the overall concept of the project; where all of the functions (called *Prefect tasks*) are managed by Prefect 2.0
