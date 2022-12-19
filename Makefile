@@ -12,10 +12,15 @@ setup:
 run:
 	python main.py
 
+health-check:
+	echo "Checking if all the required environment variables are assigned"
+
+format:
+	black *.py
+	
 # test:
 # 	python -m pytest -vv test_main.py
 
-# format:
-# 	black *.py
+
 
 
