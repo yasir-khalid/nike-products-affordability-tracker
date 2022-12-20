@@ -12,6 +12,11 @@ To run the code successfully, all the dependencies can either be installed using
 ```bash
 pip install -r requirements.txt
 ```
+**or** use the pre-define Makefile targets
+ 
+```bash
+make setup
+``` 
 **or** run the code within a pre-defined conda environment that contains all the dependencies installed. To create that conda environment; use the following command:
  
 ```bash
@@ -31,13 +36,15 @@ All of the **observability** and **monitoring** is automatically added to the co
 ![Prefect deployment schedule](https://i.imgur.com/uMH1gOi.png)
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your execution environment
+To run this project, you will need to add the following *environment variables* to your execution environment
 
 `NIKE_URL` which points to a product's page on Nike store
 
 `MY_BUDGET` i.e. your budget for that product
 
-`SLACK_WEBHOOK_PIKACHU_WORKFLOWS` i.e. slack webhook url which can be generated using [Slack Apps](https://api.slack.com/apps)
+`SLACK_WEBHOOK` i.e. slack webhook url which can be generated using [Slack Apps](https://api.slack.com/apps)
+
+All of the above env. variables can be either manually set in terminal, or stored in a **.env** file in root folder or repository
 
 ## Authors
 

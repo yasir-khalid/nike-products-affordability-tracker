@@ -1,22 +1,22 @@
 debug:
-	make --version
+	@make --version
 
-generate-requirements:
-	pip install pipreqs &&\
-		pipreqs . --force
+freeze:
+	@pip install pipreqs
+	@pipreqs . --force
 
 setup:
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+	@pip install --upgrade pip
+	@pip install -r requirements.txt
 
 run:
-	python main.py
+	@python main.py
 
 health-check:
-	echo "Checking if all the required environment variables are assigned"
+	@echo "Checking if all the required environment variables are assigned"
 
 format:
-	black *.py
+	@black *.py
 	
 # test:
 # 	python -m pytest -vv test_main.py

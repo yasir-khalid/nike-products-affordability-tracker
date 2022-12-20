@@ -1,5 +1,7 @@
 .vscode/
 __pycache__
+venv
 
 # ignore credentials file storing Slack webhook 
 credentials
+.env

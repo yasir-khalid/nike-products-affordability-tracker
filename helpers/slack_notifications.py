@@ -4,7 +4,7 @@ import os
 from prefect_slack import SlackWebhook
 from prefect_slack.messages import send_incoming_webhook_message
 
-webhook_url = config.SLACK_WEBHOOK_PIKACHU_WORKFLOWS
+webhook_url = config.SLACK_WEBHOOK
 
 def post_to_slack(message: str):
     send_incoming_webhook_message(
