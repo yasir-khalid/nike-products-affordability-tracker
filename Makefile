@@ -1,21 +1,26 @@
-debug:
+define support-libs
+	@pip install black
+	@pip install isort
+endef
+
+health:
 	@make --version
+	@python --version
 
 freeze:
 	@pip install pipreqs
 	@pipreqs . --force
 
-setup:
+setup: health
 	@pip install --upgrade pip
 	@pip install -r requirements.txt
+	@$(support-libs)
 
-run:
+run: setup
 	@python main.py
 
-health-check:
-	@echo "Checking if all the required environment variables are assigned"
-
 format:
+	@isort *.py
 	@black *.py
 	
 # test:

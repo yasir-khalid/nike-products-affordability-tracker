@@ -1,16 +1,16 @@
-import requests
-import re
 import os
+import re
+
+import requests
 from bs4 import BeautifulSoup
-
-import config
-from helpers.logs import init_logger
-from helpers.slack_notifications import post_to_slack
-from helpers.git_history import get_git_revision_short_hash
-
-from prefect import flow, task, get_run_logger
+from prefect import flow, get_run_logger, task
 from prefect.context import get_run_context
 from prefect.deployments import Deployment
+
+import config
+from helpers.git_history import get_git_revision_short_hash
+from helpers.logs import init_logger
+from helpers.slack_notifications import post_to_slack
 
 logging = init_logger(name=__name__)
 

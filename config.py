@@ -1,6 +1,7 @@
 # using Jordan's collections as an Example
 
 import os
+
 from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from `.env` file in root dir
@@ -13,6 +14,4 @@ NIKE_URL = os.getenv(
 MY_BUDGET = int(os.getenv("MY_BUDGET", 100))
 
 # AUTH TOKENS
-SLACK_WEBHOOK = os.getenv(
-    "SLACK_WEBHOOK", default=None
-)
+SLACK_WEBHOOK = os.getenv("SLACK_WEBHOOK", default=None)
