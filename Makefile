@@ -3,6 +3,10 @@ define support-libs
 	@pip install isort
 endef
 
+define vault-login:
+	@npx dotenv-vault login -y
+endef
+
 health:
 	@make --version
 	@python --version
@@ -15,7 +19,7 @@ freeze:
 setup: health
 	@pip install -r requirements.txt
 	@$(support-libs)
-	@npx dotenv-vault login
+	@$(vault-login)
 
 run: setup
 	@python main.py
@@ -30,8 +34,10 @@ push-env:
 pull-env:
 	@npx dotenv-vault pull
 
-vault-login:
-	@npx dotenv-vault login
+dotenv-vault: 
+	@npx dotenv-vault open -y
+	# alternatively you can visit `ui.dotenv.org`
+
 # test:
 # 	python -m pytest -vv test_main.py
 
