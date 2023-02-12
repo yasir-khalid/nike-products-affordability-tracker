@@ -1,5 +1,5 @@
-beautifulsoup4==4.11.1
+beautifulsoup4==4.11.2
 prefect==2.7.3
 prefect_slack==0.1.0
-python-dotenv==0.21.0
+python-dotenv==0.21.1
 requests==2.28.1
