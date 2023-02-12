@@ -76,10 +76,11 @@ def pipeline(nike_url, my_budget=100):
 if __name__ == "__main__":
     pipeline(config.NIKE_URL, config.MY_BUDGET)
 
-    deployment = Deployment.build_from_flow(
-        flow=pipeline,
-        name="Nike-affordability-checker",
-        version=get_git_revision_short_hash(),
-        work_queue_name="local-laptop-prefect-runner",
-    )
-    deployment.apply()
+    if config.PREFECT_DEPLOYMENT:
+        deployment = Deployment.build_from_flow(
+            flow=pipeline,
+            name="Nike-affordability-checker",
+            version=get_git_revision_short_hash(),
+            work_queue_name="local-laptop-prefect-runner",
+        )
+        deployment.apply()

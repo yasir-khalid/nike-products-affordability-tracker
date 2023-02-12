@@ -4,4 +4,11 @@ venv
 
 # ignore credentials file storing Slack webhook 
 credentials
-.env
+*.txt
+*.logs
+
+# dotenv-vault credentials to store environment variables securely
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
